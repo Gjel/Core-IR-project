@@ -6,7 +6,6 @@ Chiel_target = '..\\data\\collectionandqueries\\test.json'
 
 
 def tsv_to_json(start=0, end=10, src_path=Chiel_src, target_path=Chiel_target):
-    # arr = np.empty(end - start, dtype=dict)
     arr = []
     with open(src_path, 'r', encoding='utf-8') as src:
         i = 0
@@ -18,7 +17,6 @@ def tsv_to_json(start=0, end=10, src_path=Chiel_src, target_path=Chiel_target):
             line = src.readline()
             l = line.split('\t')
             entry = {'id': l[0], 'contents': l[1]}
-            # arr[i - start] = entry
             arr.append(entry)
             i += 1
 
